@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="layout">
+            <nav>
+                <img src="fotos/logo-livraria-cultura.webp" height="70" width="70">
+                <div class="login">
+                <input type="text" size="50" name="nome_livro" placeholder="Pesquisar">
+                <button class="botao">Buscar</button>
+                </div>
+                <div class="login">
+                    <img src="fotos/usuario.png" height="40" width="40">
+                    <a href="login.html" class="botaocabecalho">Faça seu Login</a>
+                </div>
+                <img src="fotos/icone-de-panier-gris.png" height="40" width="40">
+            </nav>
+        </div>
+    </header>
+    <div id="caixa">
+        <div class="titulo">
+            LOGIN
+        </div>
+        <div class="form">
+            <form name="formulario" method="post" action="login.php">
+                <input type="text" name="codigo" id="codigo" size="30" placeholder="Digite seu Código">
+                    <input type="text" name="login" id="login" size="30" placeholder="Digite seu Login">
+                    <input type="text" name="senha" id="senha" size="30" placeholder="Digite sua senha">
+                <div class="botoesinput">
+                    <input type="submit" name="gravar" value="Gravar">
+                    <input type="submit" name="excluir" value="Excluir">
+                    <input type="submit" name="alterar" value="Alterar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

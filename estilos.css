@@ -1,0 +1,79 @@
+body {
+    font-family: "Roboto";
+    margin: 0;
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    background-color: #ffffff;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+} 
+input[type="text"] {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 32px;
+}
+.botaocabecalho{
+    font-size: 16;
+    text-decoration: none;
+    color: #5a5a5a;
+}
+.login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.botao{
+    border: 1px solid #ffffff;
+    height: 32px;
+    color: #5a5a5a;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+#caixa {
+    background-color: rgb(192, 228, 230);
+    border-radius: 10px;
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 40px;
+}
+.titulo{
+    font-size: 30px;
+    color: #3a585a;
+    margin: 40px;
+}
+input[type="submit"] {
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* separa os itens verticalmente */
+}
+
+.botoesinput {
+    display: flex;
+    gap: 10px; /* separa os botões horizontalmente */
+}
