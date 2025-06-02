@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastro Editora</title>
+        <title>Cadastro Livro</title>
         <link rel="stylesheet" href="estilos.css">
     </head>
     <body>
@@ -30,12 +30,21 @@
         <br>
         <div id="caixa">
             <div class="titulo">
-                CADASTRO DE EDITORA
+                CADASTRO DE LIVRO
             </div>
             <div class="form">
-                <form name="formulario" method="post" action="cadastroeditora.php">
+                <form name="formulario" method="post" action="cadastrolivro.php" enctype="multipart/form-data">
                     <input type="text" name="codigo" id="codigo" size="30" placeholder="Digite o Código">
-                        <input type="text" name="nome" id="nome" size="30" placeholder="Digite o nome">
+                    <input type="text" name="titulo" id="titulo" size="30" placeholder="Digite o Título">
+                    <input type="text" name="nrpaginas" id="nrpaginas" size="30" placeholder="Digite o Número de páginas">
+                    <input type="text" name="ano" id="ano" size="30" placeholder="Digite o Ano">
+                    <input type="text" name="codautor" id="codautor" size="30" placeholder="Digite o Código do autor">
+                    <input type="text" name="codcategoria" id="codcategoria" size="30" placeholder="Digite o Código da categoria">
+                    <input type="text" name="codeditora" id="codeditora" size="30" placeholder="Digite o Código da editora">
+                    <input type="text" name="resenha" id="resenha" size="30" placeholder="Digite a Resenha do livro">
+                    <input type="text" name="preco" id="preco" size="30" placeholder="Digite o Preço">
+                    <input type="file" name="fotocapa1" id="fotocapa1">
+                    <input type="file" name="fotocapa2" id="fotocapa2">
                     <div class="botoesinput">
                         <input type="submit" name="gravar" value="Gravar">
                         <input type="submit" name="excluir" value="Excluir">

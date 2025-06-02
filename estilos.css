@@ -1,6 +1,7 @@
 body {
     font-family: "Roboto";
     margin: 0;
+    background-color: #fcfbf6;
 }
 
 .layout {
@@ -9,22 +10,27 @@ body {
     align-items: center;
     height: 100px;
     width: auto;
-    background-color: #ffffff;
+    background-color: #fcfbf6;
 }
 nav{
     display: flex;
     align-items: center;
-    gap: 90px;
+    gap: 70px;
 } 
-input[type="text"] {
+input[name="nome_livro"] {
+    background-color: #f0f0f0;
+    border: none;
     border-radius: 4px;
-    border: 1px solid #ccc;
-    height: 32px;
+    height: 34px;
+    padding: 0 10px;
+    outline: none;
 }
+
 .botaocabecalho{
     font-size: 16;
     text-decoration: none;
     color: #5a5a5a;
+    align-items: center;
 }
 .login {
     display: flex;
@@ -36,7 +42,7 @@ input[type="text"] {
     height: 32px;
     color: #5a5a5a;
     border-radius: 10px;
-    letter-spacing: 1px;
+    font-weight: bold;
 }
 #caixa {
     background-color: rgb(192, 228, 230);
@@ -70,10 +76,116 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px; /* separa os itens verticalmente */
+    gap: 16px; 
 }
 
 .botoesinput {
     display: flex;
-    gap: 10px; /* separa os botões horizontalmente */
+    gap: 10px; 
+}
+.separador {
+    border-left: 1px solid #c7c7c7;  
+    height: 30px;       
+  }
+
+.linha {
+    height: 1px;
+    background-color: #c7c7c7;
+    margin: 25px 50px;
+}
+
+#principal {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px; 
+    background-color: #c3dde0; 
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 3%;
+    height: 100vh;
+}
+.conteudo {
+    flex-grow: 1; 
+    padding: 20px;
+    box-sizing: border-box;
+  }
+.titulo-sidebar{
+    font-size: 30px;
+    color: #3a585a;
+    text-align: center;
+}
+input[type="text"] {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    height: 34px;
+    padding: 0 10px;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+select {
+    margin-top: 30px; 
+    padding: 10px;
+    width: 100%;
+    max-width: 400px; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.livroscontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+.livroscard {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 230px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.livroscard:hover {
+    transform: translateY(-5px);
+}
+.livroscard h3 {
+    font-size: 18px;
+    color: #2a4f4f;
+}
+.livroscard .preco {
+    font-size: 16px;
+    color: #006666;
+    font-weight: bold;
+    margin-top: 14px;
+}
+.livroscard p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #444;
+}
+.botaocomprar{
+        background-color: #3a585a;
+        color: white;
+        font-size: 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        height: 50px;
+        width: 140px;
+    }
+    
+.botao-comprar:hover {
+        background-color: #2e4646;
+}
+.titulo-menor{
+    font-size: 17px;
+    color: #3a585a;
+    text-align: center;
+    margin-top: 30px;
 }

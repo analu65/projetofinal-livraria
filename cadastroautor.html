@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastro Editora</title>
+        <title>Cadastro Autor</title>
         <link rel="stylesheet" href="estilos.css">
     </head>
     <body>
@@ -30,12 +30,13 @@
         <br>
         <div id="caixa">
             <div class="titulo">
-                CADASTRO DE EDITORA
+                CADASTRO DE AUTOR
             </div>
             <div class="form">
-                <form name="formulario" method="post" action="cadastroeditora.php">
+                <form name="formulario" method="post" action="cadastroautor.php">
                     <input type="text" name="codigo" id="codigo" size="30" placeholder="Digite o Código">
-                        <input type="text" name="nome" id="nome" size="30" placeholder="Digite o nome">
+                    <input type="text" name="nome" id="nome" size="30" placeholder="Digite o Nome">
+                    <input type="text" name="pais" id="pais" size="30" placeholder="Digite o País">
                     <div class="botoesinput">
                         <input type="submit" name="gravar" value="Gravar">
                         <input type="submit" name="excluir" value="Excluir">
@@ -43,6 +44,7 @@
                     </div>
                 </form>
             </div>
+
         </div>
     </body>
 </html>
