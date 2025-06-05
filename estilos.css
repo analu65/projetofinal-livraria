@@ -1,191 +1,275 @@
 body {
-    font-family: "Roboto";
-    margin: 0;
-    background-color: #fcfbf6;
+  font-family: "Roboto";
+  margin: 0;
+  background-color: #fcfbf6;
 }
 
 .layout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: auto;
-    background-color: #fcfbf6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: auto;
+  background-color: #fcfbf6;
 }
 nav{
-    display: flex;
-    align-items: center;
-    gap: 70px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
 } 
 input[name="nome_livro"] {
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 4px;
-    height: 34px;
-    padding: 0 10px;
-    outline: none;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  height: 34px;
+  padding: 0 10px;
+  outline: none;
 }
 
 .botaocabecalho{
-    font-size: 16;
-    text-decoration: none;
-    color: #5a5a5a;
-    align-items: center;
+  font-size: 16;
+  text-decoration: none;
+  color: #5a5a5a;
+  align-items: center;
 }
 .login {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .botao{
-    border: 1px solid #ffffff;
-    height: 32px;
-    color: #5a5a5a;
-    border-radius: 10px;
-    font-weight: bold;
+  border: 1px solid #ffffff;
+  height: 32px;
+  color: #5a5a5a;
+  border-radius: 10px;
+  font-weight: bold;
 }
 #caixa {
-    background-color: rgb(192, 228, 230);
-    border-radius: 10px;
-    width: 800px;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    padding: 40px;
+  background-color: rgb(192, 228, 230);
+  border-radius: 10px;
+  width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  padding: 40px;
 }
 .titulo{
-    font-size: 30px;
-    color: #3a585a;
-    margin: 40px;
+  font-size: 30px;
+  color: #3a585a;
+  margin: 40px;
 }
 input[type="submit"] {
-    border: none;
-    border-radius: 25px;
-    margin-top: 20px;
-    background-color: #f2f2f2;
-    color: #333;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; 
 }
 
 .botoesinput {
-    display: flex;
-    gap: 10px; 
+  display: flex;
+  gap: 10px; 
 }
 .separador {
-    border-left: 1px solid #c7c7c7;  
-    height: 30px;       
-  }
+  border-left: 1px solid #c7c7c7;  
+  height: 30px;       
+}
 
 .linha {
-    height: 1px;
-    background-color: #c7c7c7;
-    margin: 25px 50px;
+  height: 1px;
+  background-color: #c7c7c7;
+  margin: 25px 50px;
 }
 
 #principal {
-    display: flex;
+  display: flex;
 }
 
 .sidebar {
-    width: 250px; 
-    background-color: #c3dde0; 
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 3%;
-    height: 100vh;
+  width: 250px; 
+  background-color: #c3dde0; 
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 3%;
+  height: 100vh;
 }
 .conteudo {
-    flex-grow: 1; 
-    padding: 20px;
-    box-sizing: border-box;
-  }
+  flex-grow: 1; 
+  padding: 20px;
+  box-sizing: border-box;
+}
 .titulo-sidebar{
-    font-size: 30px;
-    color: #3a585a;
-    text-align: center;
+  font-size: 30px;
+  color: #3a585a;
+  text-align: center;
 }
 input[type="text"] {
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 4px;
-    height: 34px;
-    padding: 0 10px;
-    outline: none;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  height: 34px;
+  padding: 0 10px;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 select {
-    margin-top: 30px; 
-    padding: 10px;
-    width: 100%;
-    max-width: 400px; 
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  margin-top: 30px; 
+  padding: 10px;
+  width: 100%;
+  max-width: 400px; 
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 .livroscontainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
 }
 .livroscard {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 230px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 .livroscard:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 .livroscard h3 {
-    font-size: 18px;
-    color: #2a4f4f;
+  font-size: 18px;
+  color: #2a4f4f;
 }
 .livroscard .preco {
-    font-size: 16px;
-    color: #006666;
-    font-weight: bold;
-    margin-top: 14px;
+  font-size: 16px;
+  color: #006666;
+  font-weight: bold;
+  margin-top: 14px;
 }
 .livroscard p {
-    margin: 4px 0;
-    font-size: 14px;
-    color: #444;
+  margin: 4px 0;
+  font-size: 16px;
+  color: #444;
 }
 .botaocomprar{
-        background-color: #3a585a;
-        color: white;
-        font-size: 15px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        height: 50px;
-        width: 140px;
-    }
-    
-.botao-comprar:hover {
-        background-color: #2e4646;
+      background-color: #3a585a;
+      color: white;
+      font-size: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      height: 50px;
+      width: 140px;
+  }
+  
+.botaocomprar:hover {
+      background-color: #2e4646;
 }
 .titulo-menor{
-    font-size: 17px;
-    color: #3a585a;
-    text-align: center;
-    margin-top: 30px;
+  font-size: 17px;
+  color: #3a585a;
+  text-align: center;
+  margin-top: 30px;
+}
+
+section.slider {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding: 0 !important;
+  overflow: hidden;
+  margin-top: 60px; 
+}
+
+.slider {
+  position: relative;
+  width: 850px;
+  height: 260px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slider-content {
+  width: 300%;
+  display: flex;
+  transition: margin-left 0.7s ease-in-out;
+}
+
+.slide-box {
+  width: 33.3333%;
+  flex-shrink: 0;
+}
+
+.slide-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-manual, .nav-auto {
+  position: absolute;
+  margin-top: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+
+.nav-manual .manual-btn, .nav-auto div {
+  width: 16px;
+  height: 16px;
+  background-color: #ddd; 
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15); 
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 12px;
+  border: none;
+}
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+  margin-right: 10px;
+
+}
+.nav-manual .manual-btn:hover {
+  background-color: #004aad;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1,
+#radio2:checked ~ .nav-auto .auto-btn2,
+#radio3:checked ~ .nav-auto .auto-btn3 {
+  background-color: #004aad;
+}
+
+#radio1:checked ~ .slider-content {
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .slider-content {
+  margin-left: -100%;
+}
+#radio3:checked ~ .slider-content {
+  margin-left: -200%;
+}
+
+@media screen and (max-width: 900px) {
+  .img-desktop{
+    display: none;
+  }
 }

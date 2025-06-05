@@ -47,12 +47,29 @@ $db = mysql_select_db('livraria')
                 </option>
             <?php } ?>
             </select>
-            <input type="submit" name="enviar" value="Enviar">
+            <input type="submit" name="buscar" value="Buscar">
         </aside>
         <main class="conteudo">
+        <div id="slider" style="width:850px; height:260px; overflow:hidden;">
+            <img id="slideImg" src="fotosprodutos/slider1real.jpg" width="850" height="260" alt="slide">
+            </div>
 
+            <script>
+            const images = [
+                'fotosprodutos/slider1real.jpg',
+                'fotosprodutos/slider4.png',
+                'fotosprodutos/slider2.jpg'
+            ];
+            let current = 0;
+            const slideImg = document.getElementById('slideImg');
+
+            setInterval(() => {
+                current = (current + 1) % images.length;
+                slideImg.src = images[current];
+            }, 5000);
+            </script>
         <?php
-        if(isset($_POST['enviar'])) {
+        if(isset($_POST['buscar'])) {
             $categoria      = (empty($_POST['categoria']))? 'null' : $_POST['categoria'];
 
             if ($categoria <> 'null')
@@ -91,4 +108,4 @@ $db = mysql_select_db('livraria')
     </div>
 
 </body>
-</html>
+</html> 
