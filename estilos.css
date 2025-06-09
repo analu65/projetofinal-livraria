@@ -2,49 +2,48 @@ body {
   font-family: "Roboto";
   margin: 0;
   background-color: #fcfbf6;
-}
+  }
 
-.layout {
+  .layout {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
   width: auto;
   background-color: #fcfbf6;
-}
-nav{
+  }
+  nav{
   display: flex;
   align-items: center;
   gap: 70px;
-} 
-input[name="nome_livro"] {
+  } 
+  input[name="nome_livro"] {
   background-color: #f0f0f0;
   border: none;
   border-radius: 4px;
   height: 34px;
   padding: 0 10px;
   outline: none;
-}
+  }
 
-.botaocabecalho{
+  .botaocabecalho{
   font-size: 16;
   text-decoration: none;
   color: #5a5a5a;
   align-items: center;
-}
-.login {
+  }
+  .login {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-.botao{
+  }
+  .botao{
   border: 1px solid #ffffff;
   height: 32px;
-  color: #5a5a5a;
-  border-radius: 10px;
-  font-weight: bold;
-}
-#caixa {
+  border-radius: 6px;
+  }
+
+  #caixa {
   background-color: rgb(192, 228, 230);
   border-radius: 10px;
   width: 800px;
@@ -55,13 +54,13 @@ input[name="nome_livro"] {
   align-items: center;
   margin-top: 30px;
   padding: 40px;
-}
-.titulo{
+  }
+  .titulo{
   font-size: 30px;
   color: #3a585a;
   margin: 40px;
-}
-input[type="submit"] {
+  }
+  input[type="submit"] {
   border: none;
   border-radius: 25px;
   margin-top: 20px;
@@ -71,52 +70,48 @@ input[type="submit"] {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-form {
+  }
+  form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px; 
-}
+  }
 
-.botoesinput {
+  .botoesinput {
   display: flex;
   gap: 10px; 
-}
-.separador {
+  }
+  .separador {
   border-left: 1px solid #c7c7c7;  
   height: 30px;       
-}
+  }
 
-.linha {
+  .linha {
   height: 1px;
   background-color: #c7c7c7;
   margin: 25px 50px;
-}
+  }
 
-#principal {
+  #principal {
   display: flex;
-}
+  }
 
-.sidebar {
-  width: 250px; 
-  background-color: #c3dde0; 
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 3%;
-  height: 100vh;
-}
-.conteudo {
+  .sidebar {
+    width: 250px; 
+    background-color: #c3dde0; 
+    padding: 18px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    height: 100vh;
+  }
+  .conteudo {
   flex-grow: 1; 
   padding: 20px;
   box-sizing: border-box;
-}
-.titulo-sidebar{
-  font-size: 30px;
-  color: #3a585a;
-  text-align: center;
-}
-input[type="text"] {
+  }
+
+  input[type="text"] {
   background-color: #f0f0f0;
   border: none;
   border-radius: 4px;
@@ -125,23 +120,23 @@ input[type="text"] {
   outline: none;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-}
-select {
+  }
+  select {
   margin-top: 30px; 
   padding: 10px;
   width: 100%;
   max-width: 400px; 
   border-radius: 5px;
   border: 1px solid #ccc;
-}
-.livroscontainer {
+  }
+  .livroscontainer {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   padding: 20px;
-}
-.livroscard {
+  }
+  .livroscard {
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -149,30 +144,31 @@ select {
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
-}
-.livroscard:hover {
+  }
+  .livroscard:hover {
   transform: translateY(-5px);
-}
-.livroscard h3 {
+  }
+  .livroscard h3 {
   font-size: 18px;
   color: #2a4f4f;
-}
-.livroscard .preco {
+  }
+  .livroscard .preco {
   font-size: 16px;
   color: #006666;
   font-weight: bold;
   margin-top: 14px;
-}
-.livroscard p {
+  }
+  .livroscard p {
   margin: 4px 0;
   font-size: 16px;
   color: #444;
-}
-.botaocomprar{
+  }
+  .botaocomprar{
       background-color: #3a585a;
       color: white;
-      font-size: 15px;
+      font-size: 18px;
       border: none;
+      margin-top: 5px;
       border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
@@ -180,96 +176,59 @@ select {
       width: 140px;
   }
   
-.botaocomprar:hover {
+  .botaocomprar:hover {
       background-color: #2e4646;
-}
-.titulo-menor{
-  font-size: 17px;
+  }
+  .titulo-menor{
+  font-size: 22px;
   color: #3a585a;
   text-align: center;
   margin-top: 30px;
-}
-
-section.slider {
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-  padding: 0 !important;
-  overflow: hidden;
-  margin-top: 60px; 
-}
-
-.slider {
-  position: relative;
-  width: 850px;
-  height: 260px;
-  overflow: hidden;
-  margin: auto;
-}
-
-.slider-content {
-  width: 300%;
-  display: flex;
-  transition: margin-left 0.7s ease-in-out;
-}
-
-.slide-box {
-  width: 33.3333%;
-  flex-shrink: 0;
-}
-
-.slide-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.nav-manual, .nav-auto {
-  position: absolute;
-  margin-top: 30%;
-  width: 100%;
-  display: flex;
-  justify-content: center; 
-}
-
-.nav-manual .manual-btn, .nav-auto div {
-  width: 16px;
-  height: 16px;
-  background-color: #ddd; 
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15); 
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  margin-right: 12px;
-  border: none;
-}
-.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
-  margin-right: 10px;
-
-}
-.nav-manual .manual-btn:hover {
-  background-color: #004aad;
-}
-
-#radio1:checked ~ .nav-auto .auto-btn1,
-#radio2:checked ~ .nav-auto .auto-btn2,
-#radio3:checked ~ .nav-auto .auto-btn3 {
-  background-color: #004aad;
-}
-
-#radio1:checked ~ .slider-content {
-  margin-left: 0%;
-}
-
-#radio2:checked ~ .slider-content {
-  margin-left: -100%;
-}
-#radio3:checked ~ .slider-content {
-  margin-left: -200%;
-}
-
-@media screen and (max-width: 900px) {
-  .img-desktop{
-    display: none;
+  font-weight: bold;
   }
-}
+
+
+  .categoria-checkboxes {
+  padding: 10px;
+  }
+
+
+  .checkbox-item {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      padding: 3px;
+      display: flex;
+      align-items: center; 
+      gap: 8px;             
+  }
+
+  .checkbox-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      cursor: pointer;
+  }
+
+  .checkbox-item label {
+      cursor: pointer;
+      font-size: 18px;
+      color: #333;
+  }
+
+  .checkbox-item label:hover {
+      color: #688888;
+  }
+
+  input[type="submit"][name="buscar"] {
+      background-color: #688888;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 17px;
+  }
+
+  input[type="submit"][name="buscar"]:hover {
+      background-color: #696969;
+  }

@@ -1,5 +1,6 @@
 <?php
 $conectar = mysql_connect('localhost', 'root', '', 'livraria');
+mysql_set_charset('utf8', $conectar);
 $db = mysql_select_db('livraria')
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ $db = mysql_select_db('livraria')
                 <img src="fotos/logo-livraria-cultura.webp" height="78" width="78">
                     <div class="pesquisa">
                 <input type="text" size="65" name="nome_livro" placeholder="Pesquisar">
-                <button class="botao">Buscar</button>
+                <input type="submit" name="ir" value="Ir" class="botao">
                 </div>
                 <div class="separador"></div>
                 <div class="login">
@@ -32,80 +33,72 @@ $db = mysql_select_db('livraria')
     <div class="linha">
     <br>
     <div id="principal">
-        <aside class="sidebar">
-            <div class="titulo-sidebar">Menu</div>
-            <div class="titulo-menor">Pesquisar por:</div>
-            <form name="formulario" method="post" action="home.php">
-            <select name="categoria">
-                <option value="" selected="selected"> Categoria
-                </option>
+    <aside class="sidebar">
+        <div class="titulo-menor">Pesquisar por:</div>
+        <form name="formulario" method="post" action="home.php">
+            <div class="categoria-checkboxes">
                 <?php
-            $query = mysql_query("SELECT codigo, nome from categoria");
-            while($categorias = mysql_fetch_array($query)) { ?>
-                <option value="<?php echo $categorias['codigo']?>">
-                    <?php echo $categorias['nome']?>
-                </option>
-            <?php } ?>
-            </select>
-            <input type="submit" name="buscar" value="Buscar">
-        </aside>
-        <main class="conteudo">
-        <div id="slider" style="width:850px; height:260px; overflow:hidden;">
-            <img id="slideImg" src="fotosprodutos/slider1real.jpg" width="850" height="260" alt="slide">
+                $query = mysql_query("SELECT codigo, nome from categoria");
+                while($categorias = mysql_fetch_array($query)) { ?>
+                    <div class="checkbox-item">
+                        <input type="checkbox" 
+                               name="categoria[]" 
+                               value="<?php echo $categorias['codigo']?>" 
+                               id="cat_<?php echo $categorias['codigo']?>">
+                        <label for="cat_<?php echo $categorias['codigo']?>">
+                            <?php echo $categorias['nome']?>
+                        </label>
+                    </div>
+                <?php } ?>
             </div>
-
-            <script>
-            const images = [
-                'fotosprodutos/slider1real.jpg',
-                'fotosprodutos/slider4.png',
-                'fotosprodutos/slider2.jpg'
-            ];
-            let current = 0;
-            const slideImg = document.getElementById('slideImg');
-
-            setInterval(() => {
-                current = (current + 1) % images.length;
-                slideImg.src = images[current];
-            }, 5000);
-            </script>
+            <input type="submit" name="buscar" value="Buscar">
+        </form>
+    </aside>
+    
+    <main class="conteudo">
         <?php
         if(isset($_POST['buscar'])) {
-            $categoria      = (empty($_POST['categoria']))? 'null' : $_POST['categoria'];
-
-            if ($categoria <> 'null')
-            {
-                $sql_produtos = "SELECT livro.codigo, livro.titulo, livro.nrpaginas, livro.ano, livro.resenha, livro.preco, livro.fotocapa1, livro.fotocapa2, autor.nome AS nome_autor, editora.nome AS nome_editora FROM livro JOIN categoria ON livro.codcategoria = categoria.codigo JOIN autor ON livro.codautor = autor.codigo JOIN editora ON livro.codeditora = editora.codigo WHERE categoria.codigo = '$categoria' ";
-
+            $categorias_selecionadas = isset($_POST['categoria']) ? $_POST['categoria'] : array();
+            
+            if (!empty($categorias_selecionadas)) {
+                $categorias_limpa = array_map('intval', $categorias_selecionadas);
+                $categorias_string = implode(',', $categorias_limpa);
+                
+                $sql_produtos = "SELECT livro.codigo, livro.titulo, livro.nrpaginas, livro.ano, 
+                                livro.resenha, livro.preco, livro.fotocapa1, livro.fotocapa2, 
+                                autor.nome AS nome_autor, editora.nome AS nome_editora 
+                                FROM livro 
+                                JOIN categoria ON livro.codcategoria = categoria.codigo 
+                                JOIN autor ON livro.codautor = autor.codigo 
+                                JOIN editora ON livro.codeditora = editora.codigo 
+                                WHERE categoria.codigo IN ($categorias_string)";
+                
                 $seleciona_produtos = mysql_query($sql_produtos);
-            }
-            if(mysql_num_rows($seleciona_produtos) == 0)
-            {
-                echo '<h1>Desculpe, mas sua busca nao retornou resultados ... </h1>';
-            }
-            else
-            {
-                echo " <div class='titulo-sidebar'>RESULTADOS <br><br></div>";
-                echo "<div class='livroscontainer'>";
-                while ($dados = mysql_fetch_object($seleciona_produtos))
-                {
-                    echo "<div class='livroscard'>";
-                    echo "<img src='fotos/$dados->fotocapa1' width= '120' height= '180' >";
-                    echo "<h3>$dados->titulo</h3>";
-                    echo "<p> $dados->nome_autor</p>";
-                    echo "<p> $dados->nome_editora</p>";
-                    echo "<p class='preco'>R$ $dados->preco</p>";
-                    echo '<button class="botaocomprar" type="submit">Comprar</button>';
-                    echo "</div>";
-                    echo "</div>";
+                
+                if(mysql_num_rows($seleciona_produtos) == 0) {
+                    echo '<h1>Desculpe, mas sua busca não retornou resultados...</h1>';
+                } else {
+                    echo "<div class='titulo-menor'>RESULTADOS <br><br></div>";
+                    echo "<div class='livroscontainer'>";
                     
+                    while ($dados = mysql_fetch_object($seleciona_produtos)) {
+                        echo "<div class='livroscard'>";
+                        echo "<img src='fotos/$dados->fotocapa1' width='120' height='180'>";
+                        echo "<h3>$dados->titulo</h3>";
+                        echo "<p>$dados->nome_autor</p>";
+                        echo "<p>$dados->nome_editora</p>";
+                        echo "<p class='preco'>R$ $dados->preco</p>";
+                        echo '<button class="botaocomprar" type="submit">Comprar</button>';
+                        echo "</div>";
+                    }
+                    echo "</div>";
                 }
-                }
+            } else {
+                echo '<h1>Por favor, selecione pelo menos uma categoria.</h1>';
             }
-
+        }
         ?>
-        </main>
+   </main>
 </div>
-    </div>
-
 </body>
-</html> 
+</html>
