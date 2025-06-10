@@ -1,234 +1,327 @@
 body {
-  font-family: "Roboto";
-  margin: 0;
-  background-color: #fcfbf6;
-  }
-
-  .layout {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  width: auto;
-  background-color: #fcfbf6;
-  }
-  nav{
-  display: flex;
-  align-items: center;
-  gap: 70px;
-  } 
-  input[name="nome_livro"] {
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 4px;
-  height: 34px;
-  padding: 0 10px;
-  outline: none;
-  }
-
-  .botaocabecalho{
-  font-size: 16;
-  text-decoration: none;
-  color: #5a5a5a;
-  align-items: center;
-  }
-  .login {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  }
-  .botao{
-  border: 1px solid #ffffff;
-  height: 32px;
-  border-radius: 6px;
-  }
-
-  #caixa {
-  background-color: rgb(192, 228, 230);
-  border-radius: 10px;
-  width: 800px;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-  padding: 40px;
-  }
-  .titulo{
-  font-size: 30px;
-  color: #3a585a;
-  margin: 40px;
-  }
-  input[type="submit"] {
-  border: none;
-  border-radius: 25px;
-  margin-top: 20px;
-  background-color: #f2f2f2;
-  color: #333;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  }
-  form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px; 
-  }
-
-  .botoesinput {
-  display: flex;
-  gap: 10px; 
-  }
-  .separador {
-  border-left: 1px solid #c7c7c7;  
-  height: 30px;       
-  }
-
-  .linha {
-  height: 1px;
-  background-color: #c7c7c7;
-  margin: 25px 50px;
-  }
-
-  #principal {
-  display: flex;
-  }
-
-  .sidebar {
-    width: 250px; 
-    background-color: #c3dde0; 
-    padding: 18px;
-    box-sizing: border-box;
-    border-radius: 7px;
-    height: 100vh;
-  }
-  .conteudo {
-  flex-grow: 1; 
-  padding: 20px;
-  box-sizing: border-box;
-  }
-
-  input[type="text"] {
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 4px;
-  height: 34px;
-  padding: 0 10px;
-  outline: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  }
-  select {
-  margin-top: 30px; 
-  padding: 10px;
-  width: 100%;
-  max-width: 400px; 
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  }
-  .livroscontainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  padding: 20px;
-  }
-  .livroscard {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  }
-  .livroscard:hover {
-  transform: translateY(-5px);
-  }
-  .livroscard h3 {
-  font-size: 18px;
-  color: #2a4f4f;
-  }
-  .livroscard .preco {
-  font-size: 16px;
-  color: #006666;
-  font-weight: bold;
-  margin-top: 14px;
-  }
-  .livroscard p {
-  margin: 4px 0;
-  font-size: 16px;
-  color: #444;
-  }
-  .botaocomprar{
-      background-color: #3a585a;
-      color: white;
-      font-size: 18px;
-      border: none;
-      margin-top: 5px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      height: 50px;
-      width: 140px;
-  }
+    font-family: "Roboto";
+    margin: 0;
+    background-color: #fcfbf6;
+    }
   
-  .botaocomprar:hover {
-      background-color: #2e4646;
-  }
-  .titulo-menor{
-  font-size: 22px;
-  color: #3a585a;
-  text-align: center;
-  margin-top: 30px;
-  font-weight: bold;
-  }
-
-
-  .categoria-checkboxes {
-  padding: 10px;
-  }
-
-
-  .checkbox-item {
-      margin-bottom: 10px;
-      margin-top: 10px;
-      padding: 3px;
+    .layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    background-color: #fcfbf6;
+    }
+    nav{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    } 
+    input[name="nome_livro"] {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    height: 34px;
+    padding: 0 10px;
+    outline: none;
+    }
+  
+    .botaocabecalho{
+    font-size: 16;
+    text-decoration: none;
+    color: #5a5a5a;
+    align-items: center;
+    }
+    .login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    }
+  
+    #caixa {
+    background-color: rgb(192, 228, 230);
+    border-radius: 10px;
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 40px;
+    }
+    .titulo{
+    font-size: 30px;
+    color: #3a585a;
+    margin: 40px;
+    }
+    input[type="submit"] {
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+    form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; 
+    }
+  
+    .botoesinput {
+    display: flex;
+    gap: 10px; 
+    }
+    .separador {
+    border-left: 1px solid #c7c7c7;  
+    height: 30px;       
+    }
+  
+    .linha {
+    height: 1px;
+    background-color: #c7c7c7;
+    margin: 25px 50px;
+    }
+  
+    #principal {
+    display: flex;
+    }
+  
+    .sidebar {
+      width: 250px; 
+      background-color: #c3dde0; 
+      padding: 18px;
+      box-sizing: border-box;
+      border-radius: 7px;
+      height: 100vh;
+    }
+    .conteudo {
+    flex-grow: 1; 
+    padding: 20px;
+    box-sizing: border-box;
+    }
+  
+    select {
+    margin-top: 30px; 
+    padding: 10px;
+    width: 100%;
+    max-width: 400px; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    }
+    .livroscontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    }
+    .livroscard {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    }
+    .livroscard:hover {
+    transform: translateY(-5px);
+    }
+    .livroscard h3 {
+    font-size: 18px;
+    color: #2a4f4f;
+    }
+    .livroscard .preco {
+    font-size: 16px;
+    color: #006666;
+    font-weight: bold;
+    margin-top: 14px;
+    }
+    .livroscard p {
+    margin: 4px 0;
+    font-size: 16px;
+    color: #444;
+    }
+    .botaocomprar{
+        background-color: #3a585a;
+        color: white;
+        font-size: 18px;
+        border: none;
+        margin-top: 5px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        height: 50px;
+        width: 140px;
+    }
+    
+    .botaocomprar:hover {
+        background-color: #2e4646;
+    }
+    .titulo-menor{
+    font-size: 22px;
+    color: #3a585a;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    }
+  
+  
+    .categoria-checkboxes {
+    padding: 10px;
+    }
+  
+  
+    .checkbox-item {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 3px;
+        display: flex;
+        align-items: center; 
+        gap: 8px;             
+    }
+  
+    .checkbox-item input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+  
+    .checkbox-item label {
+        cursor: pointer;
+        font-size: 18px;
+        color: #333;
+    }
+  
+    .checkbox-item label:hover {
+        color: #688888;
+    }
+  
+    input[type="submit"][name="buscar"] {
+        background-color: #688888;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 17px;
+    }
+  
+    input[type="submit"][name="buscar"]:hover {
+        background-color: #696969;
+    }
+  
+    .slider {
+      width: 900px;
+      max-width: 100%;
+      position: relative;
+      margin: 20px auto;
+      overflow: hidden;
+      user-select: none;
+    }
+    
+    .slides {
       display: flex;
-      align-items: center; 
-      gap: 8px;             
-  }
-
-  .checkbox-item input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
+      width: 3600px; 
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    .slide {
+      width: 900px;
+      height: 182px; 
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      display: block;
+    }
+  
+    input[type="radio"] {
+      display: none;
+    }
+    
+    .controls {
+      text-align: center;
+      margin-top: 15px;
+    }
+    
+    .controls label {
       cursor: pointer;
-  }
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin: 7px;
+      background-color: #ccc;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+    
+    .controls label:hover {
+      background-color: #888;
+    }
+    
+    #slide1:checked ~ .slides {
+      transform: translateX(0);
+    }
+    #slide2:checked ~ .slides {
+      transform: translateX(-900px);
+    }
+    #slide3:checked ~ .slides {
+      transform: translateX(-1800px);
+    }
+    #slide4:checked ~ .slides {
+      transform: translateX(-2700px);
+    }
+    #slide1:checked ~ .controls label[for="slide1"],
+    #slide2:checked ~ .controls label[for="slide2"],
+    #slide3:checked ~ .controls label[for="slide3"],
+    #slide4:checked ~ .controls label[for="slide4"] {
+      background-color: #3a585a;
+    }
 
-  .checkbox-item label {
-      cursor: pointer;
-      font-size: 18px;
-      color: #333;
-  }
-
-  .checkbox-item label:hover {
-      color: #688888;
-  }
-
-  input[type="submit"][name="buscar"] {
-      background-color: #688888;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 17px;
-  }
-
-  input[type="submit"][name="buscar"]:hover {
-      background-color: #696969;
-  }
+.pesquisa form {
+    display: flex;
+    flex-direction: row; /* força em linha */
+    align-items: center;
+    gap: 10px;
+    }
+      
+    .pesquisa input[type="text"] {
+        height: 34px;
+        padding: 0 10px;
+        border: 1px solid #ccc;       /* mesma borda do botão */
+        border-radius: 4px 0 0 4px;   /* arredondar só a esquerda */
+        background-color: #f0f0f0;
+        font-size: 16px;
+        vertical-align: middle;
+        width: 400px;
+      }
+      
+      .pesquisa .botao {
+        height: 34px;           /* mesma altura do input */
+        padding: 0 16px;
+        border-radius: 0 4px 4px 0;  /* arredondar só a direita */
+        background-color: #f0f0f0;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 34px;            /* centraliza verticalmente o texto */
+        display: inline-block;
+        vertical-align: middle;
+      }
+nav .pesquisa form {
+    display: flex;
+    align-items: center;
+    }
